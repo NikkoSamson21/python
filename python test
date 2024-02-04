@@ -1,0 +1,57 @@
+print("Hellow")
+
+def my_test(x, y):
+    sum = x / y 
+    print("this is the number")
+    return sum  
+     
+x = int(input("Enter a number: "))
+y = int(input("Enter a number: "))
+
+result = my_test(x, y)
+
+print(result)
+
+
+def solve_it(x, y, operation):
+    if operation == 'add':
+        return x + y
+    elif operation == 'sub':
+        return x - y
+    elif operation == 'muli':
+        return x * y
+    elif operation == 'divi':
+        return x / y
+    else:
+        return None  
+
+x = int(input("Enter a number: "))
+y = int(input("Enter a number: "))
+operation = input("Enter the operation (add, sub, muli, divi): ")
+
+result = solve_it(x, y, operation)
+
+if result is not None:
+    print("Result:", result)
+else:
+    print("Invalid operation. Please enter add, sub, muli, or divi.")
+    
+    
+def compare(num1,num2,num3):
+    
+    return max(num1,num2,num3)
+    
+num1 = int(input("Enter the number 1: "))
+num2 = int(input("Enter the number 2: "))
+num3 = int(input("Enter the number 3: "))
+
+best_value = compare(num1,num2,num3)
+
+print(best_value)
+
+
+def absolute(m):
+    return abs(m)
+
+result = int(input("Enter a number: "))
+print(absolute(result))
