@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE WEBSITE</title>
+</head>
+<body>
+    <body style="background-color: white;">
+    <h1 style="color: red;">The Website </h1> 
+    <h3 style="border: 2px solid black;">is the way</h3>
+    <p style="color: red;">content is the website</p> 
+    <button style="background-color:red;"><a href="https://youtu.be/dQw4w9WgXcQ?si=uGjr_FII0vJbOCIp">Click this thank you</button>
+    
+</body>
+</html>
