@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEBSITE WITH VIDEO</title>
+    <link rel="shortcut icon" type="x-icon" href="deer.jpg.jpg"> 
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .Imagemain {
+            display:block;
+            margin-left:auto;
+            margin-right:auto ;
+
+        }
+        .videoplay {
+            display:block;
+            margin-left:auto ;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+<h1 style= Color:Brown;>HTML TESTING</h1>
+<p>this are picture of deers on the this page.</p>
+<a href="https://www.google.com/">This is the link</a> 
+<img src="deer.jpg.jpg" class="Imagemain"/>
+<br>
+<img src="deer.jpg.jpg" class="Imagemain"/>
+
+<button><a href="test2.html">Click this to go test2</a></button>
+
+<p>Testing of the website links and page</p> 
+<h1> THIS is THE VIDEO </h1> 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b--9-mX0dHM?si=rlIoG9_iCz2HXAwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" class="videoplay" allowfullscreen></iframe>
+
+
+</body>
+</html>
