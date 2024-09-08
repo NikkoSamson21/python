@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEBSITE</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+	.Imagine {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+
+    </style>
+</head>
+<body>
+    <h1>this is america</h1>
+    <pre>
+     rthrthrthrthrthrthrthrthrthrhrthrthrthrthrthrthrt
+     hrthrthrthrthrthrthrthrthrthrthrthrthrthrthrthrthrth
+     rthrthrthrthrthrthrthrthrthrthrthrthrthrthrthrthrhr   
+    </pre>
+    <br>
+    <br>
+    <br>
+    <input>htyjtyjtytyj</input>
+
+    <img src="deer.jpg.jpg" width="300" height="400" class="Imagine"/>
+    <hr>
+
+    <form>
+        Gender:
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+    </form>
+
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=i8OezCyF-h-6IJS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
