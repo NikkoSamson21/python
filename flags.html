@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API TO HTML</title>
+    <link rel="shortcut icon" type="x-icon" href="flat-clapperboard-icon_1063-38.jpg"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            align-content: center;
+        }
+        p {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .GFG:hover {
+            color: #111;
+            background: whitesmoke;
+            box-shadow: 0 0 100px whitesmoke;
+        }
+
+        .one {
+            border-style: solid;
+            border-width: medium;
+            border-color: white;
+        }
+    </style>
+    <script>
+        async function print() {
+            const response = await fetch("https://restcountries.com/v3.1/all");
+            const json = await response.json();
+            const status = json.success;
+
+            let combinedTitle = "";
+
+            json.map(r => {
+                combinedTitle += `
+                    <hr color="white" width="100%">
+                    <h1 style="color:white;">${r.name.common}</h1>
+                    <p style="color:white;">Capital: ${r.capital}</p>
+                    <p style="color:white;">Region: ${r.region}</p>
+                    <img class="GFG center" src="${r.flags.png}" style="width:500px;" onclick="sendToTeams('${r.name.common}', '${r.capital}', '${r.region}', '${r.flags.png}')">
+                    `;
+            });
+
+            document.getElementById("container").innerHTML = combinedTitle;
+        }
+
+        async function sendToTeams(name, capital, region, flag) {
+            const webhookUrl = "https://mseufeduph.webhook.office.com/webhookb2/8ef714f6-81de-4b42-ad2e-c262d5ce04d1@ddedb3cc-596d-482b-8e8c-6cc149a7a7b7/IncomingWebhook/64c653deb51a4782bf4aa0fb55c94ff3/e0510d66-17c3-43f4-a3ef-0cf6a6fba189/V2adT6HO57ExR_SHv9u3JMpcNQrqIrUA9Vs_3kcNCQIMY1";
+            const message = {
+        "@type": "MessageCard",
+        "@context": "http://schema.org/extensions",
+        "summary": "Country's",
+        "themeColor": "0076D7",
+        "title": "Country flags",
+        "sections": [
+            {
+                "activityTitle": name,
+                "activitySubtitle": `Capital: ${capital}`,
+                "activityText": region,
+                "images": [
+                    {
+                        "image": flag, 
+                        "title":' ${name}'
+                    }
+                ]
+            }
+        ]
+    };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    mode: 'no-cors',
+                    body: JSON.stringify(message)
+                });
+
+                if (response.ok) {
+                    console.log('Message sent to MS Teams successfully.');
+                } else {
+                    console.error('Error sending message to MS Teams:', response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        }
+
+    </script>
+</head>
+<body style="background-color: black;">
+    <h1 style="color: white;" >Search</h1>
+    <input type="text" placeholder="Type here">
+    <button style="color:white;">Click</button>
+    
+    <h1 class="one" style="color:white;" align="center">COUNTRY LISTS</h1>
+    <br>
+    <script>
+        window.onload = print();
+    </script>
+    
+    <div id="container"></div> 
+
+    <button style="color:white;"><a href="https://youtu.be/dQw4w9WgXcQ?si=89ycNw916oSJl4xo" style="text-decoration:none;color:white;">Click</a></button>
+</body>
+</html>
