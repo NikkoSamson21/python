@@ -426,20 +426,17 @@ Status code: 200 OK
 	Body:
 	[
 		{
-    			"message": "Devices of brand 'Oppo' retrieved successfully",
-    			"devices": [
-        	}
+        	
             			"id": 5,
            			 "name": "Oppo Reno8 T",
             			"brand": "Oppo",
             			"model": "Reno8 T",
             			"price": "PHP 23,999",
             			"availability": "In Stock"
-		]
+		}
     	]
-	<response>
-    			<message>Devices of brand 'Oppo' retrieved successfully</message>
-    		<devices>
+	<body>
+    			
        			
             			<id>5</id>
             			<name>Oppo Reno8 T</name>
@@ -448,7 +445,6 @@ Status code: 200 OK
             			<price>PHP 23,999</price>
             			<availability>In Stock</availability>
         		
-   		 </devices>
-	</response>
+	</body>
 
 			
